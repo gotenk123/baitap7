@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+<p>Nhập Số Cân Nặng Của Bạn</p>
+<input type="number" id="kg"/>
+<p>Nhập Chiều Cao Của Bạn</p>
+<input type="number" id="cm"/>
+<br>
+<br>
+<br>
+<input type="button" onclick="tinh()"value="Tính BMI"/>
+</body>
+<script>
+  function tinh(){
+    let kg=document.getElementById("kg").value;
+    let cm=document.getElementById("cm").value;
+    let bmi=kg/ (cm^2);
+    document.write("Chi So BMI="+bmi+"<br>")
+    if (bmi<18.5){document.write("Chỉ số BMI = " + "Underweight")
+    }else if (bmi<25.0) {
+      document.write("Chỉ số BMI = " +"normal")
+    }else if (bmi<30.0){document.write("Chỉ số BMI = " +"Overweight")
+    }else {
+      document.write("Obese");
+    }
+  }
+
+</script>
+</html>
